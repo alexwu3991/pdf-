@@ -1,0 +1,7 @@
+{
+  "name": "Copy of ZenOCR - Buddhist Text PDF Extractor",
+  "description": "A high-performance AI-powered tool to extract and recognize Chinese text from PDFs, specifically optimized for classical and spiritual texts like 'Modern Records of Retribution'.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
