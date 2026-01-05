@@ -2,12 +2,12 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 export async function extractTextFromImage(base64Data: string): Promise<string> {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
+  if (!process.env.API_KEY) {
     throw new Error("API Key not found in environment");
   }
 
-  const ai = new GoogleGenAI({ apiKey });
+  // Create a new instance right before making an API call to ensure it uses the most up-to-date key
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   
   // Using gemini-3-flash-preview for high speed and good vision capabilities
   const model = 'gemini-3-flash-preview';
